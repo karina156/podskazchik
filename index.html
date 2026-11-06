@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Подсказчик — линзы, которые подсказывают, что сказать</title>
+<meta name="description" content="Дизайн-фикция: линзы подсказывают фразу, которую ждёт собеседник. Платите своими словами.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <div class="box">
+
+    <!-- меню -->
+    <header class="nav reveal">
+      <nav class="nav__group" aria-label="Разделы">
+        <a class="pill" href="#price">Цена</a>
+        <a class="pill" href="#where">Где помогает</a>
+        <a class="pill" href="#statement">Выписка</a>
+      </nav>
+      <a class="logo" href="#top" aria-label="Подсказчик, наверх"><span class="logo__lens"></span>Подсказчик</a>
+      <button class="pill pill--outline" data-open="demo">Попробовать</button>
+    </header>
+
+    <!-- первый экран -->
+    <section class="hero" id="top">
+      <div class="hero__offer card-dark reveal">
+        <div class="brand"><span class="logo__lens"></span>Подсказчик</div>
+        <h1 class="h1">Бывает, что нужные слова приходят только ночью</h1>
+        <p class="lead">Линзы подскажут фразу прямо в разговоре. Ваша собственная после этого исчезнет навсегда.</p>
+        <div class="actions">
+          <button class="btn btn--light" data-open="demo">Пройти разговор с линзами</button>
+          <button class="btn btn--ghost" data-open="doc">Посмотреть выписку</button>
+        </div>
+        <div class="proof">
+          <div class="avatars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <p>Пять отзывов — одна и та же фраза. Отзывы вымышлены, как и линзы</p>
+        </div>
+      </div>
+
+      <div class="hero__lens reveal" data-delay="1">
+        <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+        <div class="lens lens--hero" id="heroLens">
+          <span class="lens__ring"></span>
+          <span class="lens__glare"></span>
+          <p class="lens__phrase" id="heroPhrase">Мне правда жаль, что я тебя расстроила</p>
+        </div>
+        <div class="mini">
+          <span class="mini__label">Ваш вариант</span>
+          <span class="mini__text"><span class="strike" id="heroOwn">ну ты это… прости, я тупанула</span></span>
+        </div>
+        <span class="arrow arrow--corner" aria-hidden="true"></span>
+        <div class="chip"><span class="chip__dot"></span>Подсказка появилась за полсекунды до ответа</div>
+      </div>
+    </section>
+
+    <!-- утверждение -->
+    <section class="statement" id="price">
+      <span class="ring s1"></span><span class="ring s2"></span><span class="ring s3"></span><span class="ring s4"></span>
+      <div class="statement__inner reveal">
+        <h2 class="h2 center">Снять линзы можно.<br>Вернуть свои слова нельзя</h2>
+        <p class="text center">Фраза, сказанная по подсказке, занимает место вашей. Без линз вы произнесёте ту же подсказанную фразу, потому что своей формулировки больше нет.</p>
+      </div>
+    </section>
+
+    <!-- фраза из пилюль -->
+    <section class="words" aria-label="Идеальные слова в обмен на ваши">
+      <div class="word word--accent reveal" data-delay="0">Идеальные</div>
+      <div class="word word--rings reveal" data-delay="1"><span class="ring w1"></span><span class="ring w2"></span><span class="ring w3"></span><b>слова</b></div>
+      <div class="word word--ink reveal" data-delay="2">в обмен</div>
+      <div class="word word--pale reveal" data-delay="3">на ваши</div>
+    </section>
+
+    <!-- где помогает -->
+    <section class="where" id="where">
+      <div class="section-head reveal">
+        <h2 class="h2">Где помогает</h2>
+        <p class="text small">Линзы спасают в разговоре, который случается один раз. В разговорах, которые повторяются, они забирают самое ценное.</p>
+      </div>
+      <div class="grid">
+        <article class="card card--ink card--wide reveal">
+          <div class="card__top">
+            <div class="tags"><span class="tag">Собеседование</span><span class="tag">Неожиданный вопрос</span></div>
+            <span class="arrow arrow--light" aria-hidden="true"></span>
+          </div>
+          <div class="card__art"><div class="lens lens--small"><span class="lens__ring"></span><span class="lens__glare"></span></div></div>
+          <h3 class="card__title">Собеседование</h3>
+          <p class="card__text">На вопрос «Почему именно вы?» линзы подскажут: «Ваши ценности совпадают с моими». Разговор разовый, и эти слова не жалко отдать.</p>
+          <button class="btn btn--light btn--full" data-open="demo" data-scene="0">Пройти сцену</button>
+        </article>
+        <article class="card card--pale reveal" data-delay="1">
+          <div class="card__top end"><span class="arrow" aria-hidden="true"></span></div>
+          <div class="card__art"><div class="lens lens--small"><span class="lens__ring"></span><span class="lens__glare"></span></div></div>
+          <h3 class="card__title">Первое свидание</h3>
+          <p class="card__text">На «А ты вообще что любишь?» появится «С тобой я чувствую себя собой». Только сказали это не вы.</p>
+          <button class="btn btn--ink btn--full" data-open="demo" data-scene="1">Пройти сцену</button>
+        </article>
+        <article class="card card--ice reveal" data-delay="2">
+          <div class="card__top end"><span class="arrow" aria-hidden="true"></span></div>
+          <div class="card__art"><div class="lens lens--small"><span class="lens__ring"></span><span class="lens__glare"></span></div></div>
+          <h3 class="card__title">Разговор с мамой</h3>
+          <p class="card__text">Подсказанное «Мне правда жаль» звучит идеально. Своими словами вы это уже не скажете.</p>
+          <button class="btn btn--ink btn--full" data-open="demo" data-scene="2">Пройти сцену</button>
+        </article>
+        <article class="card card--accent reveal" data-delay="3">
+          <div class="card__top end"><span class="arrow arrow--light" aria-hidden="true"></span></div>
+          <div class="card__art"><div class="lens lens--small"><span class="lens__ring"></span><span class="lens__glare"></span></div></div>
+          <h3 class="card__title">Признание и прощание</h3>
+          <p class="card__text">Здесь линзы лучше снять. Эти слова стоит оставить себе, даже если они получатся неловкими.</p>
+          <button class="btn btn--light btn--full" data-open="refuse">Сказать самой</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- выписка -->
+    <section class="statement-table" id="statement">
+      <div class="section-head reveal">
+        <div>
+          <h2 class="h2">Выписка за октябрь</h2>
+          <p class="text small">Заменённые формулировки восстановлению не подлежат. Снятие линз прекращает подсказки, но не возвращает слова.</p>
+        </div>
+      </div>
+      <div class="float-card" aria-hidden="true">
+        <div class="lens lens--tiny"><span class="lens__glare"></span></div>
+        <b>Выписка № 0417</b>
+        <span>Восстановлено: 0</span>
+      </div>
+      <div class="table" role="table" aria-label="Заменённые формулировки">
+        <div class="row row--head" role="row">
+          <span role="columnheader">Ваш вариант</span><span role="columnheader">Подсказка</span><span role="columnheader">Разговор</span><span role="columnheader">Дата</span>
+        </div>
+        <div class="row reveal" role="row"><span class="own" role="cell"><span class="strike">«ну ты это… прости, я тупанула»</span></span><span class="hint" role="cell">«Мне правда жаль, что я тебя расстроила»</span><span role="cell">Разговор с мамой</span><span role="cell">3 октября</span></div>
+        <div class="row reveal" role="row" data-delay="1"><span class="own" role="cell"><span class="strike">«я очень хочу у вас работать, честно»</span></span><span class="hint" role="cell">«Ваши ценности совпадают с моими»</span><span role="cell">Собеседование</span><span role="cell">11 октября</span></div>
+        <div class="row reveal" role="row" data-delay="2"><span class="own" role="cell"><span class="strike">«не знаю, как сказать, но мне с тобой хорошо»</span></span><span class="hint" role="cell">«С тобой я чувствую себя собой»</span><span role="cell">Первое свидание</span><span role="cell">18 октября</span></div>
+        <div class="row reveal" role="row" data-delay="3"><span class="own" role="cell"><span class="strike">«блин, я забыла, извини»</span></span><span class="hint" role="cell">«Прости, для меня это правда важно»</span><span role="cell">Подруга</span><span role="cell">26 октября</span></div>
+      </div>
+      <div class="totals reveal">
+        <span class="total">Заменено: <b data-count="214">0</b></span>
+        <span class="total">Передано в общий словарь: <b data-count="214">0</b></span>
+        <span class="total">Собеседников, не знавших о линзах: <b data-count="37">0</b></span>
+        <span class="total">Восстановлено: <b>0</b></span>
+      </div>
+    </section>
+
+    <!-- подвал -->
+    <footer class="footer reveal">
+      <span class="ring f1"></span><span class="ring f2"></span>
+      <div class="footer__top">
+        <span class="tag">Дизайн-фикция, линз не существует</span>
+        <div class="footer__cta">
+          <h2 class="h2 light">Пройдите разговор с линзами и посмотрите, что останется от ваших слов</h2>
+          <div class="actions">
+            <button class="btn btn--light" data-open="demo">Пройти разговор с линзами</button>
+            <button class="btn btn--ghost" data-open="refuse">Не надевать</button>
+          </div>
+          <p class="note">3 сцены, около 2 минут, без регистрации и cookie. Ваши фразы никуда не отправляются.</p>
+        </div>
+      </div>
+      <div class="footer__line"></div>
+      <div class="footer__bottom">
+        <span>2026, Карина Манукян</span>
+        <span class="brand brand--small"><span class="logo__lens"></span>Подсказчик</span>
+        <span class="tag">Курс «Дизайн интерактивных систем»</span>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- модальное окно -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" data-close aria-label="Закрыть">×</button>
+    <div class="modal__body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
